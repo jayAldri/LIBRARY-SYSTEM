@@ -49,9 +49,9 @@
 
     <div class="search-bar">
       <div class="search-box">
-        <i class="fas fa-search"><img src="
+        <i class="fas fa-search col-sm-8"><img src="
         ../../ASSETS/IMAGES/ICONS/loupe.png" alt=""></i>
-        <input type="text" placeholder="search by title or author...">
+        <input class="col-sm-8" type="text" placeholder="search by title or author...">
       </div>
 
       <div class="genre-dropdown">

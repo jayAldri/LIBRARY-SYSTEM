@@ -19,7 +19,7 @@
     <div class="row member-list">
       <div class="row">
         <div class="container mt-3">
-          <div class="card p-3 d-flex flex-row align-items-center justify-content-between shadow-sm contact-item">
+          <div class="card p-3 d-flex flex-row align-items-center justify-content-between shadow-sm contact-item col-sm-5">
 
             <!-- LEFT SIDE -->
             <div class="d-flex align-items-center ">
@@ -30,7 +30,7 @@
                 <span class="ms-3"><i class="bi bi-telephone me-1"></i> (555) 123-4567</span>
               </div>
 
-              <div class="">
+              <div class="ms-4 text-muted small">
                 <button class="btn btn-sm btn-outline-secondary ms-3">Edit</button>
                 <button class="btn btn-sm btn-outline-danger ms-2">Delete</button>
               </div>
