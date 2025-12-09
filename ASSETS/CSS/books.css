@@ -1,0 +1,137 @@
+.monitor{
+
+  gap: 20px;
+  justify-content: space-between;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+
+  margin: 20px;
+}
+.monitor2{
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px;
+  height: 60px;
+
+  border-radius: 15px;
+}
+.monitor2 img{
+  width: 40px;
+  height: 40px;
+}
+
+.monitor-content{
+
+}
+
+.monitor-content p{
+  margin: 0;
+  line-height: 1;
+}
+#total-books, #available-books, #borrowed-books, #reserved-books{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
+
+/*SECTION 2*/
+.sect2{
+  padding: 20px 2%;
+}
+.search-bar{
+  display: grid;
+  grid-template-columns: 1fr 200px 200px;
+  gap: 30px;
+
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.search-box {
+  position: relative;
+  width: 250px;
+}
+
+.search-box i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* so you can click the input */
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* left padding to avoid overlap */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.fas img{
+  height: 20px;
+  width: 20px;
+}
+
+.genre-dropdown {
+  position: relative;
+  width: 180px;
+  font-family: Arial, sans-serif;
+}
+
+.dropdown-btn {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-btn .arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+}
+
+.dropdown-menu {
+  display: none;
+  list-style: none;
+  margin-top: 5px;
+  padding: 10px 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background: #eee;
+}
+
+/* Highlight selected item */
+.dropdown-menu li.active {
+  background: #d5952c;
+  color: white;
+  border-radius: 8px;
+}

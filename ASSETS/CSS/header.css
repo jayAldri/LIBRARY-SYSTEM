@@ -1,0 +1,102 @@
+.sect1{
+  border-bottom: 5px solid #333;
+  backdrop-filter: blur(10px);
+}
+.title{
+  line-height: 1;
+}
+.title p{
+  color: #333;
+}
+.header{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  
+}
+.header img{
+  width: 40px;
+  height: 40px;
+}
+.sect1 h1{
+
+}
+
+
+.sect2{
+  margin-top: 10px;
+}
+
+.nav{
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+.nav-left{
+  display: flex;
+  gap: 40px;
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.nav-icons{
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+  align-items: center;
+  
+}
+.nav-icons a{
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+}
+
+.nav-icons img{
+  width: 25px;
+  height: 25px;
+}
+.nav-icons p{
+  gap: 15px;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+.nav-right{
+  display: flex;
+  gap: 20px;
+
+
+}
+.add{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background-color: none;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 15px 5px 15px;
+}
+.add img{
+  width: 15px;
+  height: 15px;
+  margin-right: 10px
+}
+
+.add p{
+  
+    margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
