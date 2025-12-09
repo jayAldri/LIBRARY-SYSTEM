@@ -1,0 +1,22 @@
+.members-section{
+  padding: 20px;
+}
+
+
+.member-add-box{
+  margin-top: 20px;
+}
+
+.member-list{
+  border: 1px solid #ccc;
+  margin-top: 30px;
+}
+
+.member-name{
+  line-height: .5;
+
+}
+
+.member-name p, .member-edit button{
+  display: inline-block;
+}
