@@ -99,7 +99,26 @@
 
   <section class="sect3">
     <div class="sect3-content">
-      
+      <div class="books card p-3 d-flex flex-column  justify-content-between shadow-sm contact-item col-sm-3">
+
+        <img src="../../ASSETS/IMAGES/BOOKS/book1.jpg" alt="">
+        <div class="">
+          <h4>The Great Gatsby</h4>
+          <p class="author">by F. Scott Fitzgerald</p>
+        </div>
+        <p class="status">Status: Available</p>
+        <p class="genre">Genre: Romance</p>
+
+        <div class="buttons align-items-center d-flex justify-content-center ">
+          <button class="btn btn-sm btn-outline-secondary ms-2">Borrowed</button>
+          <button class="btn btn-sm btn-outline-danger  ms-4">Reserved</button>
+        </div>
+
+
+        <div class="buttons align-items-center d-flex justify-content-center ">
+          <button class="btn btn-sm btn-outline-secondary ms-2">Edit</button>
+          <button class="btn btn-sm btn-outline-danger  ms-4">Delete</button>
+      </div>
     </div>
   </section>
 

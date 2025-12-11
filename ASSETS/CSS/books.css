@@ -137,3 +137,18 @@
   color: white;
   border-radius: 8px;
 }
+
+
+/*SECTION 3*/
+.sect3{
+  padding: 20px 2%;
+}
+.books{
+  background-color: rgba(221, 221, 221, 0.5);
+}
+.buttons {
+  margin-bottom: 20px;
+}
+.buttons button{
+  width: 130px;
+}
