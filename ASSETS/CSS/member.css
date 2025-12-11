@@ -1,7 +1,9 @@
 .members-section{
   padding: 20px;
 }
-
+.Library-member h2{
+  color: aliceblue;
+}
 
 .member-add-box{
   margin-top: 20px;

@@ -1,12 +1,12 @@
 .sect1{
-  border-bottom: 5px solid #333;
-  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #333;
+  backdrop-filter: blur(5px);
 }
 .title{
   line-height: 1;
 }
 .title p{
-  color: #333;
+  color: #fff;
 }
 .header{
   display: flex;
@@ -48,7 +48,10 @@
   gap: 15px;
   cursor: pointer;
   align-items: center;
-  
+  border: 1px solid #333;
+  padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+  background-color: rgba(221, 221, 221, 0.671);
 }
 .nav-icons a{
   gap: 15px;
@@ -56,6 +59,7 @@
   align-items: center;
   align-content: center;
   text-decoration: none;
+  color: white;
 }
 
 .nav-icons img{
@@ -79,11 +83,12 @@
   display: flex;
   gap: 5px;
   align-items: center;
-  background-color: none;
+
   border: 1px solid #333;
-  border-radius: 5px;
   cursor: pointer;
   padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+  background-color: rgba(221, 221, 221, 0.671);
 }
 .add img{
   width: 15px;
@@ -92,7 +97,7 @@
 }
 
 .add p{
-  
+  color: #fff;
     margin: 0;
   line-height: 1;
   display: flex;

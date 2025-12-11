@@ -30,18 +30,21 @@
   <section class="sect2">
     <div class="nav">
       <div class="nav-left">
+
         <div class="nav-icons">
           <a href="../../ASSETS/BOOKS">
             <img src="../../ASSETS/ICON/bookshelf-with-fout-books.png" alt="">
             <p>Bookshelf</p>
           </a>
         </div>
+
         <div class="nav-icons">
           <a href="../../ASSETS/MEMBER">
               <img src="../../ASSETS/ICON/group.png" alt="">
               <p>Members</p>
           </a>
         </div>
+        
         <div class="nav-icons">
           <img src="../../ASSETS/ICON/stopwatch.png" alt="">
           <p>Borrows</p>

@@ -1,5 +1,5 @@
 <link href="../../ASSETS/BOOTSTRAP-v5.3/css/bootstrap.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="../../ASSETS/CSS/main.css">
 
 <link rel="stylesheet" href="../../ASSETS/CSS/member.css">
 
@@ -8,7 +8,7 @@
 <section class="members-section">
   <div class="member-container">
     <div class="member-add-box row">
-      <div class="col-md-6">
+      <div class="Library-member col-md-6">
         <h2>Library Members</h2>
       </div>
       <div class="col-md-6">

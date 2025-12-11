@@ -16,8 +16,9 @@
   gap: 10px;
   padding: 20px;
   height: 60px;
-
+  background-color: rgba(0,0,0,0.5);
   border-radius: 15px;
+  border: 1px solid #ccc;
 }
 .monitor2 img{
   width: 40px;
@@ -31,6 +32,7 @@
 .monitor-content p{
   margin: 0;
   line-height: 1;
+  color: #eee;
 }
 #total-books, #available-books, #borrowed-books, #reserved-books{
   font-size: 30px;
