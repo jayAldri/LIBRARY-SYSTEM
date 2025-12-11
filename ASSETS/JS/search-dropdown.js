@@ -27,8 +27,30 @@ function selectGenre(element) {
   document.getElementById("dropdown-menu").style.display = "none";
 }
 
+function selectStatus(element) {
+
+  document.querySelectorAll(".dropdown-menu li").forEach(li => {
+    li.classList.remove("active");
+  });
+
+
+  element.classList.add("active");
+
+
+  document.getElementById("selected-status").textContent = element.textContent;
+
+
+  document.getElementById("dropdown-menu-status").style.display = "none";
+}
+
 document.addEventListener("click", function(e) {
   if (!document.querySelector(".genre-dropdown").contains(e.target)) {
     document.getElementById("dropdown-menu").style.display = "none";
+  }
+});
+
+document.addEventListener("click", function(e) {
+  if (!document.querySelector(".status-dropdown").contains(e.target)) {
+    document.getElementById("dropdown-menu-status").style.display = "none";
   }
 });

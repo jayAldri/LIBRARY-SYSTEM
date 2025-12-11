@@ -106,3 +106,15 @@
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+  #starRating i {
+        cursor: pointer;
+        color: #ddd;
+        transition: color 0.2s;
+    }
+
+    #starRating i.active,
+    #starRating i:hover,
+    #starRating i:hover ~ i {
+        color: gold;
+    }
