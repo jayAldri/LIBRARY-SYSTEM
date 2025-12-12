@@ -110,16 +110,16 @@
   </section>
 
   <section class="sect3">
-    <div class="sect3-content">
-      <div id="books" class="books card p-3 d-flex flex-column  justify-content-between shadow-sm contact-item col-sm-3">
+    <div class="container row g-3 mt-4">
+      <!-- <div id="books" class="books card p-3 d-flex flex-column  justify-content-between shadow-sm contact-item col-sm-3">
 
         <img src="../../ASSETS/IMAGES/BOOKS/book1.jpg" alt="">
         <div class="">
-          <h4>The Great Gatsby</h4>
-          <p class="author">by F. Scott Fitzgerald</p>
+          <h4 id="title">The Great Gatsby</h4>
+          <p id="author" class="author">by F. Scott Fitzgerald</p>
         </div>
-        <p class="status">Status: Available</p>
-        <p class="genre">Genre: Romance</p>
+        <p id="status" class="status">Status: Available</p>
+        <p id="genre" class="genre">Genre: Romance</p>
 
         <div class="buttons align-items-center d-flex justify-content-center ">
           <button class="btn btn-sm btn-outline-secondary ms-2">Borrowed</button>
@@ -130,9 +130,10 @@
         <div class="buttons align-items-center d-flex justify-content-center ">
           <button class="btn  btn-sm btn-outline-secondary ms-2" data-bs-toggle="modal" data-bs-target="#editBookModal">Edit</button>
           <button class="btn btn-sm btn-outline-danger  ms-4">Delete</button>
-      </div>
+      </div> -->
 
-      <div class="booksContainer"></div>
+        <!--THIS CONTAINER DISPLAYS BOOKS EVERY TIME YOU ADD BOOK-->
+      <div id="booksContainer" class="col"></div>
     </div>
   </section>
 

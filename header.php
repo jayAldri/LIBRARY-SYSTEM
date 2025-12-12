@@ -74,41 +74,39 @@
 
 
 <!--POP UP FILL TO ADD MORE BOOKS-->
-
-  <div class="modal fade" id="fillUpModal" tabindex="-1">
+<!-- ADD BOOK MODAL -->
+<div class="modal fade" id="fillUpModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
 
-      <!-- MODAL HEADER -->
+      <!-- HEADER -->
       <div class="modal-header">
         <h5 class="modal-title">Add Another Book</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
-      <!-- MODAL BODY -->
+      <!-- BODY -->
       <div class="modal-body">
-        <form id="myForm">
+        <form id="addBookForm">
 
+          <!-- BOOK TITLE -->
           <div class="mb-3">
-            <label class="form-label">Book title</label>
-            <input type="text" class="form-control" placeholder="Enter book title" required>
+            <label class="form-label">Book Title</label>
+            <input id="bookTitle" type="text" class="form-control" placeholder="Enter book title" required>
           </div>
 
+          <!-- AUTHOR -->
           <div class="mb-3">
-            <label class="form-label">Author name</label>
-            <input type="text" class="form-control" placeholder="Enter author name" required>
+            <label class="form-label">Author Name</label>
+            <input id="bookAuthor" type="text" class="form-control" placeholder="Enter author name" required>
           </div>
-
-          <!-- <div class="mb-3">
-            <label class="form-label">Message</label>
-            <textarea class="form-control" rows="3" required></textarea>
-          </div> -->
 
           <div class="row">
 
-            <div class="add-genre-dropdown">
-              <label class="form-label">Genre*</label>
-              <button class="dropdown-btn" onclick="toggleGenre()">
+            <!-- GENRE DROPDOWN -->
+            <div class="col-6 add-genre-dropdown">
+              <label class="form-label">Genre *</label>
+              <button class="dropdown-btn" type="button" onclick="toggleGenre()">
                 <span id="add-select-genre">Select Genre</span>
                 <i class="arrow"></i>
               </button>
@@ -125,9 +123,11 @@
                 <li onclick="addSelectGenre(this)">Self-Help</li>
               </ul>
             </div>
-            <div class="add-status-dropdown">
+
+            <!-- STATUS DROPDOWN -->
+            <div class="col-6 add-status-dropdown">
               <label class="form-label">Status *</label>
-              <button class="dropdown-btn" onclick="toggleStatus()">
+              <button class="dropdown-btn" type="button" onclick="toggleStatusAdd()">
                 <span id="add-select-status">Select Status</span>
                 <i class="arrow"></i>
               </button>
@@ -138,35 +138,34 @@
               </ul>
             </div>
 
-
-            <div class="mb-3">
-              <label for="imageUpload" class="form-label">Upload Image</label>
-              <input class="form-control" type="file" id="imageUpload" accept="image/*">
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label">Shelf/Location</label>
-              <input type="text" class="form-control" placeholder="Enter shelf/location" required>
-            </div>
-
-          
-
-            
           </div>
 
+          <!-- IMAGE UPLOAD -->
+          <div class="mb-3 mt-3">
+            <label for="imageUpload" class="form-label">Upload Book Image</label>
+            <input class="form-control" type="file" id="imageUpload" accept="image/*">
+          </div>
+
+          <!-- LOCATION / SHELF -->
+          <div class="mb-3">
+            <label class="form-label">Shelf / Location</label>
+            <input id="bookShelf" type="text" class="form-control" placeholder="Enter shelf/location" required>
+          </div>
 
         </form>
       </div>
-      <!-- MODAL FOOTER -->
+
+      <!-- FOOTER -->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" form="myForm" class="btn btn-primary" >Submit</button>
+        <button type="submit" form="addBookForm" class="btn btn-primary">Submit</button>
       </div>
 
     </div>
-
   </div>
 </div>
+
+
 
   <script src="../../ASSETS/JS/addBookDropdown.js"></script>
 </body>

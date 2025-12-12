@@ -1,4 +1,4 @@
-function toggleStatus() {
+function toggleStatusAdd() {
   document.getElementById("add-dropdown-menu-status").style.display = document.getElementById("add-dropdown-menu-status").style.display === "block" ? "none" : "block";
 }
 

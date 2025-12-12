@@ -21,6 +21,9 @@
     <div class="row member-list">
       <div class="row">
         <div class="container mt-3">
+
+
+          <!--THIS CONTAINER DISPLAY ALL MEMBERS EVERY TIME YOU ADD-->
           <div id="membersList" class="mt-3"></div>
         </div>
 
