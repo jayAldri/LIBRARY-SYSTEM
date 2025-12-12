@@ -4,12 +4,21 @@ function toggleStatus() {
 }
 
 
+
+
 function toggleDropdown() {
   document.getElementById("dropdown-menu").style.display =
     document.getElementById("dropdown-menu").style.display === "block"
       ? "none"
       : "block";
 }
+
+
+
+
+
+
+
 
 function selectGenre(element) {
 

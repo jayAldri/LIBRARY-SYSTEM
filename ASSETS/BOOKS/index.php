@@ -111,7 +111,7 @@
 
   <section class="sect3">
     <div class="sect3-content">
-      <div class="books card p-3 d-flex flex-column  justify-content-between shadow-sm contact-item col-sm-3">
+      <div id="books" class="books card p-3 d-flex flex-column  justify-content-between shadow-sm contact-item col-sm-3">
 
         <img src="../../ASSETS/IMAGES/BOOKS/book1.jpg" alt="">
         <div class="">
@@ -131,6 +131,8 @@
           <button class="btn  btn-sm btn-outline-secondary ms-2" data-bs-toggle="modal" data-bs-target="#editBookModal">Edit</button>
           <button class="btn btn-sm btn-outline-danger  ms-4">Delete</button>
       </div>
+
+      <div class="booksContainer"></div>
     </div>
   </section>
 
@@ -226,3 +228,4 @@
   
 
   <script src="../../ASSETS/JS/search-dropdown.js"></script>
+  <script src="../../ASSETS/JS/addBooks.js"></script>

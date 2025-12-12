@@ -6,11 +6,13 @@
   <title>Library System</title>
 
   <link href="../../ASSETS/BOOTSTRAP-v5.3/css/bootstrap.min.css" rel="stylesheet">
-  <script src="../../ASSETS/BOOTSTRAP-v5.3/js/bootstrap.bundle.min.js"></script>
-  <script src="../../ASSETS/JQUERY/jquery-3.6.0.min.js"></script>
+
+<script src="../../ASSETS/JQUERY/jquery-3.6.0.min.js"></script>
+<script src="../../ASSETS/BOOTSTRAP-v5.3/js/bootstrap.bundle.min.js"></script>
 
 
-  <script src="ASSETS/JQUERY/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="../../ASSETS/CSS/header.css?v=1.2">
 </head>
@@ -104,33 +106,35 @@
 
           <div class="row">
 
-            <div class="dropdown col-sm-6 mt-3">
+            <div class="add-genre-dropdown">
               <label class="form-label">Genre*</label>
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Select Genre
+              <button class="dropdown-btn" onclick="toggleGenre()">
+                <span id="add-select-genre">Select Genre</span>
+                <i class="arrow"></i>
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Fiction</a></li>
-                <li><a class="dropdown-item" href="#">Non-Fiction</a></li>
-                <li><a class="dropdown-item" href="#">Science Fiction</a></li>
-                <li><a class="dropdown-item" href="#">Fantasy</a></li>
-                <li><a class="dropdown-item" href="#">Mystery</a></li>
-                <li><a class="dropdown-item" href="#">Romance</a></li>
-                <li><a class="dropdown-item" href="#">Biography</a></li>
-                <li><a class="dropdown-item" href="#">History</a></li>
-                <li><a class="dropdown-item" href="#">Science</a></li>
-                <li><a class="dropdown-item" href="#">Self-Help</a></li>
+              <ul class="dropdown-menu" id="add-dropdown-menu-genre">
+                <li onclick="addSelectGenre(this)">Fiction</li>
+                <li onclick="addSelectGenre(this)">Non-Fiction</li>
+                <li onclick="addSelectGenre(this)">Science Fiction</li>
+                <li onclick="addSelectGenre(this)">Fantasy</li>
+                <li onclick="addSelectGenre(this)">Mystery</li>
+                <li onclick="addSelectGenre(this)">Romance</li>
+                <li onclick="addSelectGenre(this)">Biography</li>
+                <li onclick="addSelectGenre(this)">History</li>
+                <li onclick="addSelectGenre(this)">Science</li>
+                <li onclick="addSelectGenre(this)">Self-Help</li>
               </ul>
             </div>
-            <div class="dropdown col-sm-6 mt-3">
+            <div class="add-status-dropdown">
               <label class="form-label">Status *</label>
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Select Status
+              <button class="dropdown-btn" onclick="toggleStatus()">
+                <span id="add-select-status">Select Status</span>
+                <i class="arrow"></i>
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Available</a></li>
-                <li><a class="dropdown-item" href="#">Borrowed</a></li>
-                <li><a class="dropdown-item" href="#">Reserved</a></li>
+              <ul class="dropdown-menu" id="add-dropdown-menu-status">
+                <li onclick="addSelectStatus(this)">Available</li>
+                <li onclick="addSelectStatus(this)">Borrowed</li>
+                <li onclick="addSelectStatus(this)">Reserved</li>
               </ul>
             </div>
 
@@ -156,7 +160,7 @@
       <!-- MODAL FOOTER -->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" form="myForm" class="btn btn-primary">Submit</button>
+        <button type="submit" form="myForm" class="btn btn-primary" >Submit</button>
       </div>
 
     </div>
@@ -164,6 +168,6 @@
   </div>
 </div>
 
-  <script src="ASSETS/JS/search-dropdown.js"></script>
+  <script src="../../ASSETS/JS/addBookDropdown.js"></script>
 </body>
 </html>
