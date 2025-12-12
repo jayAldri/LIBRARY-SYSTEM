@@ -13,9 +13,9 @@ function addSelectGenre(element) {
 
   element.classList.add("active");
 
-  document.getElementById("add-select-status").textContent = element.textContent;
+  document.getElementById("add-select-genre").textContent = element.textContent;
 
-  document.getElementById("add-dropdown-menu-status").style.display = "none";
+  document.getElementById("add-dropdown-menu-genre").style.display = "none";
 
 
 }
