@@ -22,13 +22,14 @@ function renderBooks() {
 
   books.forEach((book, index) => {
     const card = document.createElement("div");
-    card.className = "card p-3 mb-3";
+     
+    card.className = "card p-3 h-100 mb-5";
 
     card.innerHTML = `
       <div class="d-flex align-items-start">
 
         <img src="${book.image ? book.image : 'default-book.png'}" 
-             style="width: 80px; height: 110px; object-fit: cover; border-radius: 5px;" 
+             style="width: 100pxs; height: 210px; object-fit: cover; border-radius: 5px;" 
              class="me-3">
 
         <div>
@@ -40,8 +41,14 @@ function renderBooks() {
         </div>
       </div>
 
-      <div class="mt-2">
-          <button class="btn btn-sm btn-danger" onclick="deleteBook(${index})">Delete</button>
+      <div class="d-grid gap-2 d-md-block mt-3">
+        <button class="btn btn-outline-secondary ms-2">Borrowed</button>
+        <button class="btn  btn-outline-secondary ms-2">Reserved</button>
+      </div>
+
+      <div class="d-grid gap-2 d-md-block mt-2">
+        <button class="btn  btn-outline-secondary ms-2" data-bs-toggle="modal" data-bs-target="#editBookModal">Edit</button>
+          <button class="btn btn-danger" onclick="deleteBook(${index})">Delete</button>
       </div>
     `;
 
@@ -106,8 +113,8 @@ document.getElementById("addBookForm").addEventListener("submit", function (e) {
   }
 
   // Close modal
-  const modal = bootstrap.Modal.getInstance(document.getElementById("fillUpModal"));
-  modal.hide();
+      const modal = bootstrap.Modal.getInstance(document.getElementById("fillUpModal"));
+      modal.hide();
 
   // Reset form fields
   document.getElementById("addBookForm").reset();

@@ -133,7 +133,7 @@
       </div> -->
 
         <!--THIS CONTAINER DISPLAYS BOOKS EVERY TIME YOU ADD BOOK-->
-      <div id="booksContainer" class="col"></div>
+      <div id="booksContainer" class="container"></div>
     </div>
   </section>
 
