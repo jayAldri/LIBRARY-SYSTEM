@@ -139,14 +139,60 @@
 
 
 
-
-
-
-
-
-<!-- EDIT BOOKS MODAL -->
-<div class="modal fade" id="editBookModal" tabindex="-1">
+<!-- BORROW MODAL -->
+<div class="modal fade" id="borrowModal" tabindex="-1" aria-labelledby="borrowModalLabel" aria-hidden="true">
   <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="borrowForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="borrowModalLabel">Borrow Book</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="borrowBookName" class="form-label">Book Name</label>
+            <input type="text" class="form-control" id="borrowBookName" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label for="borrowBookAuthor" class="form-label">Author</label>
+            <input type="text" class="form-control" id="borrowBookAuthor" readonly>
+          </div>
+
+          <div class="mb-3">
+            <label for="borrowMember" class="form-label">Member</label>
+            <select class="form-select" id="borrowMember" required>
+              <option value="">Select Member</option>
+              <option value="JAY">JAY</option>
+              <option value="JAHBI">JAHBI</option>
+              <option value="NICKS">NICKS</option>
+              <option value="OOGWAY">OOGWAY</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="borrowDueDate" class="form-label">Due Date</label>
+            <input type="date" class="form-control" id="borrowDueDate" required>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Confirm Borrow</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- EDIT BOOK MODAL -->
+<div class="modal fade" id="editBookModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
       <div class="modal-header">
@@ -157,71 +203,67 @@
       <div class="modal-body">
         <form id="editBookForm">
 
+          <input type="hidden" id="editIndex">
+
           <div class="mb-3">
-            <label class="form-label">Book title</label>
-            <input type="text" class="form-control" required>
+            <label class="form-label">Book Title</label>
+            <input type="text" id="editTitle" class="form-control" required>
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Author name</label>
-            <input type="text" class="form-control" required>
+            <label class="form-label">Author</label>
+            <input type="text" id="editAuthor" class="form-control" required>
           </div>
 
           <div class="row">
-            
-            <div class="dropdown col-sm-6 mt-3">
-              <label class="form-label">Genre*</label>
-              <button  class="btn btn-secondary dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
-                Select Genre
-              </button>
-              <ul class="dropdown-menu w-100" id="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Fiction</a></li>
-                <li><a class="dropdown-item" href="#">Non-Fiction</a></li>
-                <li><a class="dropdown-item" href="#">Science Fiction</a></li>
-                <li><a class="dropdown-item" href="#">Fantasy</a></li>
-                <li><a class="dropdown-item" href="#">Mystery</a></li>
-                <li><a class="dropdown-item" href="#">Romance</a></li>
-                <li><a class="dropdown-item" href="#">Biography</a></li>
-                <li><a class="dropdown-item" href="#">History</a></li>
-                <li><a class="dropdown-item" href="#">Science</a></li>
-                <li><a class="dropdown-item" href="#">Self-Help</a></li>
-              </ul>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Genre</label>
+              <select id="editGenre" class="form-select" required>
+                <option>Fiction</option>
+                <option>Non-Fiction</option>
+                <option>Science Fiction</option>
+                <option>Fantasy</option>
+                <option>Mystery</option>
+                <option>Romance</option>
+                <option>Biography</option>
+                <option>History</option>
+                <option>Science</option>
+                <option>Self-Help</option>
+              </select>
             </div>
 
-            <div class="dropdown col-sm-6 mt-3">
-              <label class="form-label">Status*</label>
-              <button class="btn btn-secondary dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
-                Select Status
-              </button>
-              <ul class="dropdown-menu w-100">
-                <li><a class="dropdown-item" href="#">Available</a></li>
-                <li><a class="dropdown-item" href="#">Borrowed</a></li>
-                <li><a class="dropdown-item" href="#">Reserved</a></li>
-              </ul>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Status</label>
+              <select id="editStatus" class="form-select" required>
+                <option>Available</option>
+                <option>Borrowed</option>
+                <option>Reserved</option>
+              </select>
             </div>
-
-            <div class="mb-3 mt-3">
-              <label for="imageUpload" class="form-label">Upload Image</label>
-              <input class="form-control" type="file" id="imageUpload" accept="image/*">
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label">Shelf/Location</label>
-              <input type="text" class="form-control" required>
-            </div>
-
           </div>
+
+          <div class="mb-3">
+            <label class="form-label">Shelf / Location</label>
+            <input type="text" id="editLocation" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Change Image (optional)</label>
+            <input type="file" id="editImage" class="form-control" accept="image/*">
+          </div>
+
         </form>
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button class="btn btn-primary">Save Changes</button>
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-primary" id="saveEditBtn">Save Changes</button>
       </div>
 
     </div>
   </div>
 </div>
+
 
 
 
