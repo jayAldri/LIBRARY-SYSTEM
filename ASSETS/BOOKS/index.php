@@ -272,3 +272,4 @@
 
   <script src="../../ASSETS/JS/search-dropdown.js"></script>
   <script src="../../ASSETS/JS/addBooks.js"></script>
+  <script src="../../ASSETS/JS/borrowed-active.js"></script>
