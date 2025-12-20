@@ -14,7 +14,7 @@
 <section class="borrow-section container mt-4">
 
   <!-- ACTIVE BORROWED BOOKS -->
-  <div class="borrow-active mb-5" id="borrow-active">
+  <div class="borrow-active mb-5" id="activeBorrowedList">
     <h3>Currently Borrowed</h3>
     <div class="text-container"></div>
   </div>

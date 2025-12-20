@@ -140,39 +140,42 @@
 
 
 <!-- BORROW MODAL -->
-<div class="modal fade" id="borrowModal" tabindex="-1" aria-labelledby="borrowModalLabel" aria-hidden="true">
+<div class="modal fade" id="borrowModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <form id="borrowForm">
+
         <div class="modal-header">
-          <h5 class="modal-title" id="borrowModalLabel">Borrow Book</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title">Borrow Book</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
 
         <div class="modal-body">
+          <input type="hidden" id="borrowBookId">
+
           <div class="mb-3">
-            <label for="borrowBookName" class="form-label">Book Name</label>
+            <label class="form-label">Book Name</label>
             <input type="text" class="form-control" id="borrowBookName" readonly>
           </div>
 
           <div class="mb-3">
-            <label for="borrowBookAuthor" class="form-label">Author</label>
+            <label class="form-label">Author</label>
             <input type="text" class="form-control" id="borrowBookAuthor" readonly>
           </div>
 
           <div class="mb-3">
-            <label for="borrowMember" class="form-label">Member</label>
+            <label class="form-label">Member</label>
             <select class="form-select" id="borrowMember" required>
               <option value="">Select Member</option>
-              <option value="JAY">JAY</option>
-              <option value="JAHBI">JAHBI</option>
-              <option value="NICKS">NICKS</option>
-              <option value="OOGWAY">OOGWAY</option>
+              <option>JAY</option>
+              <option>JAHBI</option>
+              <option>NICKS</option>
+              <option>OOGWAY</option>
             </select>
           </div>
 
           <div class="mb-3">
-            <label for="borrowDueDate" class="form-label">Due Date</label>
+            <label class="form-label">Due Date</label>
             <input type="date" class="form-control" id="borrowDueDate" required>
           </div>
         </div>
@@ -181,10 +184,12 @@
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
           <button type="submit" class="btn btn-primary">Confirm Borrow</button>
         </div>
+
       </form>
     </div>
   </div>
 </div>
+
 
 
 

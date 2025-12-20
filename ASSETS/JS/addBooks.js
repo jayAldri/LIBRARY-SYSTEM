@@ -209,3 +209,43 @@ function updateMonitorCounts() {
   document.getElementById("borrowed-books").textContent = borrowed;
   document.getElementById("reserved-books").textContent = reserved;
 }
+
+function confirmBorrow(id, title, author) {
+  if (!confirm(`Confirm borrowing "${title}"?`)) return;
+  const borrowedBook = { id, title, author, borrowedDate: new Date().toLocaleDateString() };
+  let borrowed = JSON.parse(localStorage.getItem("activeBorrowedBooks")) || [];
+  if (borrowed.some(book => book.id === id)) {
+    alert("This book is already borrowed.");
+    return;
+  }
+  borrowed.push(borrowedBook);
+  localStorage.setItem("activeBorrowedBooks", JSON.stringify(borrowed));
+  renderActiveBorrowed();
+}
+
+function renderActiveBorrowed() {
+  const container = document.getElementById("activeBorrowedList");
+  container.innerHTML = "";
+  const borrowed = JSON.parse(localStorage.getItem("activeBorrowedBooks")) || [];
+  borrowed.forEach((book, index) => {
+    container.innerHTML += `
+      <div class="col-md-3 mb-3">
+        <div class="card p-3 h-100">
+          <h6>${book.title}</h6>
+          <small>${book.author}</small><br>
+          <small class="text-muted">Borrowed: ${book.borrowedDate}</small>
+          <button class="btn btn-danger btn-sm mt-2"
+              onclick="returnBook(${index})">Return</button>
+        </div>
+      </div>`;
+  });
+}
+
+function returnBook(index) {
+  let borrowed = JSON.parse(localStorage.getItem("activeBorrowedBooks")) || [];
+  borrowed.splice(index, 1);
+  localStorage.setItem("activeBorrowedBooks", JSON.stringify(borrowed));
+  renderActiveBorrowed();
+}
+
+document.addEventListener("DOMContentLoaded", renderActiveBorrowed);
